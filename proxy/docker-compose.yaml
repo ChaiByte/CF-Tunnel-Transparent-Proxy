@@ -1,0 +1,8 @@
+services:
+  xray:
+    image: teddysun/xray
+    container_name: cf-tunnel-xray
+    network_mode: host
+    volumes:
+        - ./config.json:/etc/xray/config.json
+    restart: always

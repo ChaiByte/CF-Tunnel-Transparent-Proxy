@@ -1,0 +1,20 @@
+services:
+  xray:
+    image: teddysun/xray
+    container_name: cf-tunnel-xray
+    network_mode: host
+    volumes:
+        - ./config.json:/etc/xray/config.json
+    restart: always
+
+  cloudflared:
+    depends_on:
+      - xray
+    image: cloudflare/cloudflared
+    container_name: cf-tunnel-cloudflared
+    network_mode: host
+    env_file: ".env"
+    command: >
+      tunnel --no-autoupdate run
+      --token ${TUNNEL_TOKEN}
+    restart: always

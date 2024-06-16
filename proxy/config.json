@@ -1,0 +1,27 @@
+{
+    "log": {
+        "loglevel": "debug"
+    },
+    "inbounds": [
+        {
+            "port": 10086,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "0213f601-00ad-40c1-b0b7-311c7e2c725f"
+                    }
+                ]
+            },
+            "sniffing": {
+                "enabled": false
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "settings": {}
+        }
+    ]
+}
