@@ -12,11 +12,6 @@
             },
             "sniffing": {
                 "enabled": false
-            },
-            "streamSettings": {
-                "sockopt": {
-                    "tproxy": "tproxy"
-                }
             }
         }
     ],
