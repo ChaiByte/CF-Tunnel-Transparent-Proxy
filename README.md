@@ -38,20 +38,8 @@ For someone who can not access the docker hub, these offical documents may be he
 
 - [Configure the Docker daemon to use a proxy server](https://docs.docker.com/config/daemon/systemd/#httphttps-proxy)
 - [Configure Docker to use a proxy server](https://docs.docker.com/network/proxy/)
+- [为群晖 Container Manager 配置代理](https://blog.chai.ac.cn/posts/docker-proxy)
 
-<details>
-<summary>Adding current user to `docker` group.</summary>
-
-It's not recommended to run docker as the root user. Instead, you can add your current user to the `docker` group:
-
-```shell
-sudo groupadd docker
-sudo usermod -aG docker $USER
-getent group docker
-newgrp docker
-docker run hello-world
-```
-</details>
 
 ## How to use
 
